@@ -2,6 +2,7 @@
 const gulp = require('gulp');
 const packageImporter = require('node-sass-package-importer');
 const rename = require("gulp-rename");
+const replace = require('gulp-replace');
 
 // require : scss
 const plumber = require('gulp-plumber');
@@ -64,6 +65,7 @@ gulp.task('css', function(){
     .src( './dest/css/style.css' )
     .pipe( header('@charset "utf-8";\n') )
     .pipe( cleanCSS() )
+    .pipe(replace('/*!', '/*'))
     // .pipe( rename({ extname: '.min.css' }) )
     .pipe( gulp.dest( path.dest ) );
 });
