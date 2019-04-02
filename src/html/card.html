@@ -3,20 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>top page</title>
+    <title>card page</title>
     <link rel="stylesheet" href="/css/style.min.css">
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
     <script src="/js/script.min.js"></script>
 </head>
 <body>
-
-<div class="l-hero c-hero">
-    <div class="c-hero__heading">
-        <h1 class="c-hero__title">SITE TITLE</h1>
-    </div>
-
-    <p class="c-hero__desc">This is description area.</p>
-</div>
 
 <nav class="l-gnav c-gnav">
     <input type="checkbox" id="is-gnav-label" class="c-humberger__input">
@@ -42,9 +34,22 @@
     </div>
 </nav>
 
-<div class="l-section c-heading">
-    <h3 class="c-heading__title">このサイトについて</h3>
-    <p class="c-heading__desc">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+<div class="c-heading c-heading--mt">
+    <h2 class="c-heading__title">この商品について</h2>
+</div>
+
+<div class="l-section c-products">
+    <div class="c-products__image">
+        <img src="/images/products-1.jpg" alt="" class="c-products__panel js-pick-panel">
+        <img src="/images/products-1.jpg" alt="" class="c-products__thumb js-pick-thumb is-active">
+        <img src="/images/products-2.jpg" alt="" class="c-products__thumb js-pick-thumb">
+        <img src="/images/products-3.jpg" alt="" class="c-products__thumb js-pick-thumb">
+    </div>
+
+    <div class="c-products__detail">
+        <h3 class="c-products__title">商品名</h3>
+        <p class="c-products__desc">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+    </div>
 </div>
 
 <div class="l-section c-card">
@@ -57,28 +62,7 @@
         <a href="card.html" class="c-card__item">This is Card area.</a>
     </div>
 </div>
-
-<div class="l-section c-heading">
-    <h3 class="c-heading__title">Information</h3>
-</div>
-
-<div class="l-section c-list">
-
-    <div class="c-list__items">
-        <a href="information.html" class="c-list__item">List area 1.</a>
-        <a href="information.html" class="c-list__item">List area 2.</a>
-        <a href="information.html" class="c-list__item">List area 3.</a>
-    </div>
-</div>
-
-<div class="c-panel">
-    <a href="panel.html" class="c-panel__item">This is Panel area.</a>
-    <a href="panel.html" class="c-panel__item">This is Panel area.</a>
-    <a href="panel.html" class="c-panel__item">This is Panel area.</a>
-    <a href="panel.html" class="c-panel__item c-panel__item--sub">This is Panel area.</a>
-    <a href="panel.html" class="c-panel__item c-panel__item--sub">This is Panel area.</a>
-</div>
-
+    
 <footer class="c-footer">
     <aside class="c-pagetop">
         <div class="c-pagetop__icon"></div>

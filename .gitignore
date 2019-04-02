@@ -1,6 +1,6 @@
 # Npm specific files #
 node_modules/*
-/dist/
+/dest/
 
 *~
 *.bak

@@ -3,19 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>top page</title>
+    <title>panel page</title>
     <link rel="stylesheet" href="/css/style.min.css">
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
     <script src="/js/script.min.js"></script>
 </head>
 <body>
 
-<div class="l-hero c-hero">
-    <div class="c-hero__heading">
-        <h1 class="c-hero__title">SITE TITLE</h1>
-    </div>
-
-    <p class="c-hero__desc">This is description area.</p>
+<div class="l-catch c-catch">
+    <h1 class="c-catch__title">コンテンツについて</h1>
 </div>
 
 <nav class="l-gnav c-gnav">
@@ -43,31 +39,42 @@
 </nav>
 
 <div class="l-section c-heading">
-    <h3 class="c-heading__title">このサイトについて</h3>
+    <h3 class="c-heading__title">コンテンツについて</h3>
     <p class="c-heading__desc">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
 </div>
 
-<div class="l-section c-card">
-    <div class="c-card__items">
-        <a href="card.html" class="c-card__item">This is Card area.</a>
-        <a href="card.html" class="c-card__item">This is Card area.</a>
-        <a href="card.html" class="c-card__item">This is Card area.</a>
-        <a href="card.html" class="c-card__item">This is Card area.</a>
-        <a href="card.html" class="c-card__item">This is Card area.</a>
-        <a href="card.html" class="c-card__item">This is Card area.</a>
+<div class="l-section">
+    <div class="c-article">
+        <div class="c-article__image">
+            <img src="http://satyr.io/640x320" alt="" class="c-article__thumb">
+        </div>
+        
+        <div class="c-article__detail">
+            <h4 class="c-article__title">タイトル</h4>
+            <p class="c-article__desc">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+        </div>
     </div>
-</div>
 
-<div class="l-section c-heading">
-    <h3 class="c-heading__title">Information</h3>
-</div>
+    <div class="c-article">
+        <div class="c-article__image">
+            <img src="http://satyr.io/640x320" alt="" class="c-article__thumb">
+        </div>
+        
+        <div class="c-article__detail">
+            <h4 class="c-article__title">タイトル</h4>
+            <p class="c-article__desc">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+        </div>
+    </div>
 
-<div class="l-section c-list">
-
-    <div class="c-list__items">
-        <a href="information.html" class="c-list__item">List area 1.</a>
-        <a href="information.html" class="c-list__item">List area 2.</a>
-        <a href="information.html" class="c-list__item">List area 3.</a>
+    <div class="c-article">
+        <div class="c-article__image">
+            <img src="http://satyr.io/640x320" alt="" class="c-article__thumb">
+        </div>
+        
+        <div class="c-article__detail">
+            <h4 class="c-article__title">タイトル</h4>
+            <p class="c-article__desc">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+        </div>
     </div>
 </div>
 
