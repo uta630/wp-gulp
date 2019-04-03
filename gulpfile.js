@@ -70,22 +70,22 @@ gulp.task('css', function(){
     .pipe( gulp.dest( path.dest ) );
 });
 
-// task : html
+// task : php
 gulp.task('ejs', function(){
   return gulp
-    .src(['./src/ejs/*.ejs'])
+    .src(['./src/ejs/**/*.ejs'])
     .pipe(plumber({
         handleError: function(err){
             this.emit('end');
         }
     }))
     .pipe(ejs())
-    .pipe(rename({extname: '.html'}))
-    .pipe(gulp.dest( 'src/html' ));
+    .pipe(rename({extname: '.php'}))
+    .pipe(gulp.dest( 'src/php' ));
 });
 gulp.task('minify-html', function(){
   return gulp
-    .src('src/html/*.html')
+    .src('src/php/*.php')
     // .pipe(htmlmin({
     //     collapseWhitespace : true,
     //     removeComments : true
