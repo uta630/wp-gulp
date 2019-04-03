@@ -1,0 +1,28 @@
+.c-alert {
+    margin-bottom: 56px;
+    
+    &__item {
+        text-align: center;
+        line-height: 2.6;
+    }
+    
+    &__desc {
+        line-height: 2.6;
+    }
+
+    &__bottom {
+        margin-top: 16px;
+    }
+
+    &__return {
+        margin-top: 12px;
+
+        text-decoration: underline;
+        color: $primary-color;
+        font-size: 14px;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
