@@ -81,16 +81,6 @@ gulp.task('ejs', function(){
     }))
     .pipe(ejs())
     .pipe(rename({extname: '.php'}))
-    .pipe(gulp.dest( 'src/php' ));
-});
-gulp.task('minify-html', function(){
-  return gulp
-    .src('src/php/*.php')
-    // .pipe(htmlmin({
-    //     collapseWhitespace : true,
-    //     removeComments : true
-    // }))
-    .pipe(rename({extname: '.php'}))
     .pipe(gulp.dest( path.dest ))
 });
 
@@ -150,14 +140,14 @@ function watchFiles(done) {
     done();
   };
   gulp.watch('src/scss/**/*.scss').on('change', gulp.series('scss', 'css', 'imagemin', browserReload));
-  gulp.watch('src/**/*.ejs').on('change', gulp.series('ejs', 'minify-html', 'imagemin', browserReload));
+  gulp.watch('src/**/*.ejs').on('change', gulp.series('ejs', 'imagemin', browserReload));
   gulp.watch('src/**/*.js').on('change', gulp.series('webpack', 'minjs', 'imagemin', browserReload));
 }
 
 gulp.task('default',
   gulp.series(
     'scss', 'css',
-    'ejs', 'minify-html',
+    'ejs',
     'webpack', 'minjs',
     'imagemin',
     sync, watchFiles)
