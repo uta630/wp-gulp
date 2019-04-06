@@ -15,14 +15,10 @@
     <p class="c-heading__desc">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
 </div>
 
+
 <div class="l-section c-card">
     <div class="c-card__items">
-        <a href="/card.php" class="c-card__item">This is Card area.</a>
-        <a href="/card.php" class="c-card__item">This is Card area.</a>
-        <a href="/card.php" class="c-card__item">This is Card area.</a>
-        <a href="/card.php" class="c-card__item">This is Card area.</a>
-        <a href="/card.php" class="c-card__item">This is Card area.</a>
-        <a href="/card.php" class="c-card__item">This is Card area.</a>
+        <?php get_template_part('loop'); ?>
     </div>
 </div>
 
@@ -31,20 +27,13 @@
 </div>
 
 <div class="l-section c-list">
-
     <div class="c-list__items">
-        <a href="/information.php" class="c-list__item">List area 1.</a>
-        <a href="/information.php" class="c-list__item">List area 2.</a>
-        <a href="/information.php" class="c-list__item">List area 3.</a>
+        <?php get_template_part('loop-info'); ?>
     </div>
 </div>
 
 <div class="c-panel">
-    <a href="/panel.php" class="c-panel__item">This is Panel area.</a>
-    <a href="/panel.php" class="c-panel__item">This is Panel area.</a>
-    <a href="/panel.php" class="c-panel__item">This is Panel area.</a>
-    <a href="/panel.php" class="c-panel__item c-panel__item--sub">This is Panel area.</a>
-    <a href="/panel.php" class="c-panel__item c-panel__item--sub">This is Panel area.</a>
+    <?php get_template_part('loop-item'); ?>
 </div>
 
 <?php get_footer(); ?>

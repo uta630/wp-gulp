@@ -23,15 +23,4 @@
     <?php endif; ?>
 </div>
 
-<div class="l-section c-card">
-    <div class="c-card__items">
-        <a href="/card.php" class="c-card__item">This is Card area.</a>
-        <a href="/card.php" class="c-card__item">This is Card area.</a>
-        <a href="/card.php" class="c-card__item">This is Card area.</a>
-        <a href="/card.php" class="c-card__item">This is Card area.</a>
-        <a href="/card.php" class="c-card__item">This is Card area.</a>
-        <a href="/card.php" class="c-card__item">This is Card area.</a>
-    </div>
-</div>
-
 <?php get_footer(); ?>
