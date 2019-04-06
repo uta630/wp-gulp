@@ -21,4 +21,17 @@ add_theme_support('custom-header', $custom_header_defaults);
 register_nav_menu('gnav', 'グローバルメニュー');
 register_nav_menu('snsnav', 'SNS');
 
-?>
+// カスタム投稿
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+    register_post_type( 'info',
+        [
+        'labels' => [
+            'name'          => 'お知らせ',
+            'singular_name' => 'info',
+        ],
+        'public'        => true,
+        'menu_position' => 5,
+    ]);
+}
+
