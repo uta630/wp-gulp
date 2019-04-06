@@ -32,6 +32,17 @@ function create_post_type() {
         ],
         'public'        => true,
         'menu_position' => 5,
-    ]);
+        ]
+    );
+    register_post_type( 'item',
+        [
+        'labels' => [
+            'name'          => 'アイテム',
+            'singular_name' => 'item',
+        ],
+        'public'        => true,
+        'menu_position' => 6,
+        ]
+    );
 }
 
