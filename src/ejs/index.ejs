@@ -22,7 +22,7 @@
     </div>
 
     <?php
-        $category_id = get_cat_ID( 'blog' );
+        $category_id = get_cat_ID( 'contents' );
         $category_link = get_category_link( $category_id );
     ?>
     <a href="<?php echo esc_url( $category_link ); ?>" class="c-btn">コンテンツ一覧へ</a>
