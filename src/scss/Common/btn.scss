@@ -1,0 +1,25 @@
+.c-btn {
+    display: block;
+
+    background: $secondary-color;
+
+    width: 128px;
+
+    margin: 24px auto 0;
+    padding: 8px 12px;
+
+    text-align: center;
+    color: $white;
+    font-size: 14px;
+
+    border-radius: 3px;
+    box-shadow: 0 2px 3px $secondary-color;
+
+    transition: .2s;
+    transition-property: background, box-shadow;
+
+    &:hover {
+        background: $primary-color;
+        box-shadow: 0 0 0 $secondary-color;
+    }
+}
