@@ -20,6 +20,7 @@ add_theme_support('custom-header', $custom_header_defaults);
 // カスタムメニュー
 register_nav_menu('gnav', 'グローバルメニュー');
 register_nav_menu('snsnav', 'SNS');
+register_nav_menu('company', '会社情報');
 
 // カスタム投稿
 add_action( 'init', 'create_post_type' );
@@ -34,15 +35,16 @@ function create_post_type() {
         'menu_position' => 5,
         ]
     );
-    register_post_type( 'item',
-        [
-        'labels' => [
-            'name'          => 'アイテム',
-            'singular_name' => 'item',
-        ],
-        'public'        => true,
-        'menu_position' => 6,
-        ]
-    );
+    // カスタム投稿を増やしたければここに記述する
+    // register_post_type( 'about',
+    //     [
+    //     'labels' => [
+    //         'name'          => 'サイトについて',
+    //         'singular_name' => 'about',
+    //     ],
+    //     'public'        => true,
+    //     'menu_position' => 6,
+    //     ]
+    // );
 }
 
