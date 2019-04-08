@@ -10,6 +10,8 @@
     <div class="c-card__items">
         <?php get_template_part('loop'); ?>
     </div>
+
+    <?php if(function_exists("pagination")) pagination($additional_loop->max_num_pages); ?>
 </div>
 
 <?php get_footer(); ?>

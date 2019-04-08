@@ -23,4 +23,22 @@
     <?php endif; ?>
 </div>
 
+<?php $args = array(
+    'numberposts' => 3,
+    'post_type' => 'info'
+);
+$posts = get_posts( $args );
+?>
+<div class="l-section c-list">
+    <div class="c-list__items">
+        <?php get_template_part('loop-info'); ?>
+
+        <?php
+            $category_id = get_cat_ID( 'info' );
+            $category_link = get_category_link( $category_id );
+        ?>
+        <a href="<?php echo esc_url( $category_link ); ?>" class="c-btn">お知らせ一覧へ</a>
+    </div>
+</div>
+
 <?php get_footer(); ?>

@@ -1,0 +1,44 @@
+.c-pager {
+    margin-top: 24px;
+
+    font-size: 14px;
+
+    & ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__side {
+    }
+
+    &__item {
+        background: $secondary-color;
+
+        margin: 0 6px;
+
+        line-height: 2;
+        text-align: center;
+        color: $white;
+
+        border-radius: 3px;
+
+        & a {
+            display: block;
+
+            padding: 0 4px;
+    
+            color: $white;
+        }
+    }
+
+    &__item:not(&__side) {
+        width: 24px;
+    }
+
+    &__item:not(&__active) {
+        &:hover {
+            transition: .2s;
+            opacity: .6;
+        }
+    }
+}

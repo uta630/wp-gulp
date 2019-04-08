@@ -48,3 +48,38 @@ function create_post_type() {
     // );
 }
 
+// ページャ
+function pagination($pages = '', $post_type = 'post', $range = 2) {
+    $showitems = ($range * 2) + 1;
+
+    global $paged;
+    if(empty($paged)) $paged = 1 ;
+   
+    if($pages == '') {
+        global $wp_query;
+        $wp_query->query(array(
+            'post_type' => $post_type,
+        ));
+        $pages = $wp_query->max_num_pages;
+        if(!$pages) {
+            $pages = 1;
+        }
+    }
+   
+    if(1 != $pages) {
+        echo "<div class=\"c-pager\">";
+        echo "<ul>\n";
+
+        if($paged > 1) echo "<li class=\"c-pager__item c-pager__side c-pager__prev\"><a href='".get_pagenum_link($paged - 1)."'>Prev</a></li>\n";
+
+        for($i=1; $i <= $pages; $i++){
+            if(1 != $pages && ( !($i >= $paged + $range + 1 || $i <= $paged - $range - 1) || $pages <= $showitems )){
+                echo ($paged == $i) ? "<li class=\"c-pager__item c-pager__active\">".$i."</li>\n" : "<li class='c-pager__item'><a href='".get_pagenum_link($i)."'>".$i."</a></li>\n" ;
+            }
+        }
+
+        if($paged < $pages) echo "<li class=\"c-pager__item c-pager__side c-pager__next\"><a href='".get_pagenum_link($paged + 1)."'>Next</a></li>\n";
+        echo "</ul>\n";
+        echo "</div>\n";
+    }
+}

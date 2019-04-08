@@ -7,7 +7,7 @@
 </div>
 
 <?php $args = array(
-    'numberposts' => 10,
+    'posts_per_page' => 3,
     'post_type' => 'info'
 );
 $posts = get_posts( $args );
@@ -16,6 +16,8 @@ $posts = get_posts( $args );
     <div class="c-list__items">
         <?php get_template_part('loop-info'); ?>
     </div>
+
+    <?php if(function_exists("pagination")) pagination($additional_loop->max_num_pages, 'info'); ?>
 </div>
 
 <?php get_footer(); ?>
