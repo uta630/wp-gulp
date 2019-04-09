@@ -83,3 +83,20 @@ function pagination($pages = '', $post_type = 'post', $range = 2) {
         echo "</div>\n";
     }
 }
+
+// カスタマイズ : 「サイトについて」エリア追加
+function site_about_register($wp_customize) {
+	$wp_customize->add_section( 'site_about' , array(
+		'title' => 'サイトについて',
+	));
+	$wp_customize->add_setting( 'site_about_options', array(
+		'default' => '',
+		'type' => 'option',
+	));
+	$wp_customize->add_control( 'site_about_set', array(
+		'label' => '概要',
+		'section' => 'site_about',
+		'settings' => 'site_about_options',
+	));
+}
+add_action( 'customize_register' , 'site_about_register' );
