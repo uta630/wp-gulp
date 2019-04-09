@@ -17,7 +17,7 @@ $posts = get_posts( $args );
         <?php get_template_part('loop-info'); ?>
     </div>
 
-    <?php if(function_exists("pagination")) pagination($additional_loop->max_num_pages, 'info'); ?>
+    <?php if(function_exists("pagination")) pagination($additional_loop->max_num_pages); ?>
 </div>
 
 <?php get_footer(); ?>
