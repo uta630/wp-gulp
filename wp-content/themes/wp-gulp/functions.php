@@ -84,8 +84,9 @@ function pagination($pages = '', $post_type = 'post', $range = 2) {
     }
 }
 
-// カスタマイズ : 「サイトについて」エリア追加
-function site_about_register($wp_customize) {
+// サイトカスタマイザー
+function site_settings($wp_customize) {
+    // カスタマイズ : 「サイトについて」エリア追加
 	$wp_customize->add_section( 'site_about' , array(
 		'title' => 'サイトについて',
 	));
@@ -97,6 +98,27 @@ function site_about_register($wp_customize) {
 		'label' => '概要',
 		'section' => 'site_about',
 		'settings' => 'site_about_options',
-	));
+    ));
+    
+
+    // カスタマイズ : 配色
+    $wp_customize->add_setting( 'site_primary_color', array(
+        'default'    => '#333',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'site_primary_color', array(
+        'label'      => __( 'Primary Color', 'textdomain' ),
+        'section'    => 'colors',
+        'priority' => 10,
+    )));
+    $wp_customize->add_setting( 'site_secondary_color', array(
+        'default'    => '#666',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'site_secondary_color', array(
+        'label'      => __( 'Secondary Color', 'textdomain' ),
+        'section'    => 'colors',
+        'priority' => 10,
+    )));
 }
-add_action( 'customize_register' , 'site_about_register' );
+add_action( 'customize_register' , 'site_settings' );
