@@ -3,9 +3,90 @@
 
     &__detail {
         line-height: 1.6;
-    }
 
-    &__title {
-        margin-bottom: 12px;
+        & h2, & h3, & p {
+            margin: 42px 0 24px;
+        }
+
+        & h2, & h3, & h4 {
+            font-weight: bold;
+        }
+
+        & h2 {
+            position: relative;
+
+            font-size: 24px;
+
+            &::before {
+                content: '';
+                display: block;
+
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                
+                background: $primary-color;
+
+                width: 60px;
+                height: 1px;
+            }
+        }
+        & h3 {
+            font-size: 18px;
+        }
+        & h4 {
+            font-size: 14px;
+        }
+
+        & p {
+            margin: 1em 0;
+            font-size: 16px;
+        }
+        & a {
+            color: #00f;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        & blockquote {
+            margin: 1em 0;
+            padding: 16px;
+
+            border-left: 3px solid $secondary-color;
+            box-sizing: border-box;
+
+            & p {
+                color: $secondary-color;
+                font-size: 14px;
+            }
+            & a {
+                font-size: 12px;
+            }
+        }
+        & cite {
+            & a {}
+        }
+
+        & ol, & ul {
+            margin: 1em 1.6em;
+        }
+        & ol {
+            list-style: decimal;
+        }
+        & ul {
+            list-style: disc;
+        }
+
+        & strong {
+            font-weight: bold;
+        }
+        & em {
+            font-style: italic;
+        }
+        & del {
+            text-decoration: line-through;
+        }
     }
 }

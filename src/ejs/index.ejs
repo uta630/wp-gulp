@@ -51,14 +51,4 @@ $posts = get_posts( $args );
     </div>
 </div>
 
-<div class="c-panel">
-    <?php wp_nav_menu( array(
-        'theme_location' => 'company',
-        'container'      => '',
-        'menu_class'     => '',
-        'items_wrap'     => '<ul class="%2$s">%3$s</ul>',
-    ) ); ?>
-    <?php get_template_part('loop-item'); ?>
-</div>
-
 <?php get_footer(); ?>
