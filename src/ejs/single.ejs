@@ -10,12 +10,25 @@
     <?php if(have_posts()) :
             while (have_posts()) : the_post(); ?>
         <div class="c-products__image">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/products-1.jpg" alt="" class="c-products__panel js-pick-panel">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/products-1.jpg" alt="" class="c-products__thumb js-pick-thumb is-active">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/products-2.jpg" alt="" class="c-products__thumb js-pick-thumb">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/products-3.jpg" alt="" class="c-products__thumb js-pick-thumb">
+            <?php
+                $images = [];
+                $images_limit = 3;
+                for($i=1; $i <= $images_limit; $i++){
+                    array_push($images, get_field( "contents_image".$i ));
+                }
+            ?>
+            <img src="<?php echo $images[0] ; ?>" class="c-products__panel js-pick-panel">
+
+            <?php
+                for($i=1; $i <= $images_limit; $i++){
+                    $active = $i !== 1 ?: 'is-active' ;
+                    if($images[($i-1)]){
+                        echo '<img src="'.$images[($i-1)].'" class="c-products__thumb js-pick-thumb '.$active.'">';
+                    }
+                }
+            ?>
         </div>
-    
+
         <div class="c-products__detail">
             <h3 class="c-products__title"><?php the_title(); ?></h3>
             <p class="c-products__desc"><?php the_content(); ?></p>
