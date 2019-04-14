@@ -1,13 +1,13 @@
-.l-list {
-
-}
 .c-list {
     &__item {
+        @include text-ellipsis;
+
         position: relative;
 
         display: block;
 
-        padding: 0 4%;
+        padding-right: 10%;
+        padding-left: 4%;
 
         line-height: 46px;
         color: $black;
@@ -30,7 +30,7 @@
 
             position: absolute;
             top: 0;
-            right: 6%;
+            right: 4%;
             bottom: 0;
 
             display: block;

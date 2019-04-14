@@ -26,7 +26,7 @@
 </div>
 
 <div class="l-section c-heading">
-    <h3 class="c-heading__title">Information</h3>
+    <h3 class="c-heading__title">お知らせ</h3>
 </div>
 
 <?php

@@ -1,19 +1,22 @@
 .c-heading {
     margin-bottom: 24px;
 
+    text-align: center;
+
     &--mt {
         margin-top: 120px;
     }
     
     &__title {
         @include fx-c;
+        display: inline-block;
 
         position: relative;
 
-        width: 170px;
-        height: 38px;
 
-        margin: 0 auto 24px;
+        line-height: 38px;
+
+        padding: 0 12px;
 
         font-size: 14px;
 
@@ -43,5 +46,7 @@
         }
     }
 
-    &__desc {}
+    &__desc {
+        margin-top: 24px;
+    }
 }
