@@ -1,11 +1,24 @@
 <div class="c-panel">
-    <?php wp_nav_menu( array(
-        'theme_location' => 'company',
-        'container'      => '',
-        'menu_class'     => '',
-        'items_wrap'     => '<ul class="%2$s">%3$s</ul>',
-    ) ); ?>
-    <?php get_template_part('loop-item'); ?>
+    <ul class="c-panel__items">
+        <?php
+        $menu_items = wp_get_nav_menu_items('会社情報');
+        foreach ($menu_items as $menu):
+            $page_id = $menu->object_id;
+            $thumbnail_id = get_post_thumbnail_id($page_id);
+            $image_attributes = wp_get_attachment_image_src($thumbnail_id, 'large'); 
+            $content = get_page($page_id);
+        ?>
+            <li class="<?php echo $content->post_name; ?> c-panel__item">
+                <a href="<?php echo get_permalink($page_id); ?>" class="c-panel__link"
+                    style="background-image: url(<?php echo $image_attributes[0]; ?>);"
+                >
+                    <span class="c-panel__link-inner"><?php echo $content->post_title; ?></span>
+                </a>
+            </li>
+        <?php
+        endforeach;
+        ?>
+    </ul>
 </div>
 
 <footer class="c-footer">
