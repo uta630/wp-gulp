@@ -13,7 +13,6 @@ Template Name: 〜お知らせ一覧〜
 
 <?php
     $args = array(
-        'posts_per_page' => 3,
         'post_type' => 'info'
     );
     $posts = get_posts( $args );
