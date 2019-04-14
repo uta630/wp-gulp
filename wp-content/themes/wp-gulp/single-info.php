@@ -24,7 +24,7 @@
 </div>
 
 <div class="l-section">
-    <a href="<?php echo get_post_cat_link('お知らせ') ?>" class="c-btn">お知らせ一覧へ</a>
+    <a href="/information/" class="c-btn">お知らせ一覧へ</a>
 </div>
 
 <?php get_footer(); ?>

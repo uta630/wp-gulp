@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: 〜お知らせ一覧〜
+*/
+?>
 <?php get_header(); ?>
 
 <?php get_template_part('gnav'); ?>

@@ -21,7 +21,7 @@
         <?php get_template_part('loop'); ?>
     </div>
     
-    <a href="<?php echo get_post_cat_link('コンテンツ') ?>" class="c-btn">コンテンツ一覧へ</a>
+    <a href="<?php echo get_post_cat_link('コンテンツ') ?>" class="c-btn">一覧へ</a>
 </div>
 
 <div class="l-section c-heading">
@@ -39,7 +39,7 @@
     <div class="c-list__items">
         <?php get_template_part('loop-info'); ?>
         
-        <a href="<?php echo get_post_cat_link('お知らせ') ?>" class="c-btn">お知らせ一覧へ</a>
+        <a href="/information/" class="c-btn">一覧へ</a>
     </div>
 </div>
 
