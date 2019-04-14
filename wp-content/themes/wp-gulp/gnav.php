@@ -1,12 +1,11 @@
 <nav class="l-gnav c-gnav">
-    <input type="checkbox" id="is-gnav-label" class="c-humberger__input">
-    <label for="is-gnav-label" class="l-gnav__humberger c-humberger">
+    <div class="l-gnav__humberger c-humberger js-gnav">
         <span class="c-humberger__line c-humberger__line--1"></span>
         <span class="c-humberger__line c-humberger__line--2"></span>
         <span class="c-humberger__line c-humberger__line--3"></span>
-    </label>
+    </div>
 
-    <div class="l-gnav__menu c-gnav__menu">
+    <div class="l-gnav__menu c-gnav__menu js-gnav-target">
         <div class="c-gnav__items">
             <?php wp_nav_menu( array(
                 'theme_location' => 'gnav',

@@ -25,7 +25,6 @@
 }
 
 .c-gnav {
-    &__humberger {}
     &__menu {
         @include fx-c;
     }
@@ -98,15 +97,15 @@
         }
     }
 
-    // checked
-    &__input:checked + & {
+    // open
+    &.is-active {
         & + .l-gnav__menu {
             opacity: 1;
 
             transform: translateX(-100%);
         }
     }
-    &__input:checked + & &__line {
+    &.is-active &__line {
         &--1 {
             transform: rotate(45deg);
         }

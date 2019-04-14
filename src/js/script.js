@@ -22,4 +22,10 @@ $(window).on('load', function(){
 		$('html, body').animate({scrollTop: 0}, 200);
 		return false;
 	});
+
+	// gnav
+	$('.js-gnav').on('click', function(){
+		$(this).toggleClass('is-active');
+		$('.js-gnav-target').toggleClass('is-active');
+	});
 });
