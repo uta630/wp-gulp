@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="l-hero c-hero" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/bg.jpg)">
+<div class="l-hero c-hero" style="background-image: url(<?php header_image(); ?>)">
     <div class="c-hero__heading">
         <h1 class="c-hero__title"><?php bloginfo('name'); ?></h1>
     </div>

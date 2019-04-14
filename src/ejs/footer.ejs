@@ -14,7 +14,7 @@
         <a href="javascript:void(0);" class="c-pagetop__btn js-pagetop-btn">Page Top</a>
     </aside>
 
-    <p class="c-copyright">Copyright uta all right reseved.</p>
+    <p class="c-copyright">&copy; 2019 <?php bloginfo('name'); ?></p>
 </footer>
 
 <aside class="c-overlay js-overlay">
