@@ -16,38 +16,30 @@
     <p class="c-heading__desc"><?php echo get_option( 'site_about_options' ); ?></p>
 </div>
 
-
 <div class="l-section c-card">
     <div class="c-card__items">
         <?php get_template_part('loop'); ?>
     </div>
-
-    <?php
-        $category_id = get_cat_ID( 'contents' );
-        $category_link = get_category_link( $category_id );
-    ?>
-    <a href="<?php echo esc_url( $category_link ); ?>" class="c-btn">コンテンツ一覧へ</a>
+    
+    <a href="<?php echo get_post_cat_link('コンテンツ') ?>" class="c-btn">コンテンツ一覧へ</a>
 </div>
 
 <div class="l-section c-heading">
     <h3 class="c-heading__title">Information</h3>
 </div>
 
-<?php $args = array(
-    'numberposts' => 3,
-    'post_type' => 'info'
-);
-$posts = get_posts( $args );
+<?php
+    $args = array(
+        'numberposts' => 3,
+        'post_type' => 'info'
+    );
+    $posts = get_posts( $args );
 ?>
 <div class="l-section c-list">
     <div class="c-list__items">
         <?php get_template_part('loop-info'); ?>
-
-        <?php
-            $category_id = get_cat_ID( 'info' );
-            $category_link = get_category_link( $category_id );
-        ?>
-        <a href="<?php echo esc_url( $category_link ); ?>" class="c-btn">お知らせ一覧へ</a>
+        
+        <a href="<?php echo get_post_cat_link('お知らせ') ?>" class="c-btn">お知らせ一覧へ</a>
     </div>
 </div>
 

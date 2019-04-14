@@ -43,11 +43,7 @@
 </div>
 
 <div class="l-section">
-    <?php
-        $category_id = get_cat_ID( 'contents' );
-        $category_link = get_category_link( $category_id );
-    ?>
-    <a href="<?php echo esc_url( $category_link ); ?>" class="c-btn">コンテンツ一覧へ</a>
+    <a href="<?php echo get_post_cat_link('コンテンツ') ?>" class="c-btn">コンテンツ一覧へ</a>
 </div>
 
 <?php get_footer(); ?>

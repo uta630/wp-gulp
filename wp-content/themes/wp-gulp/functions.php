@@ -17,6 +17,13 @@ $custom_header_defaults = array(
 );
 add_theme_support('custom-header', $custom_header_defaults);
 
+// カテゴリ一覧リンク
+function get_post_cat_link($cat_name){
+    $category_id = get_cat_ID($cat_name);
+    $category_link = get_category_link( $category_id );
+    return esc_url( $category_link );
+}
+
 // カスタムメニュー
 register_nav_menu('gnav', 'グローバルメニュー');
 register_nav_menu('snsnav', 'SNS');
