@@ -9,10 +9,12 @@
 <div class="l-section c-info">
     <?php if(have_posts()) :
             while (have_posts()) : the_post(); ?>
-        <div id="post-<?php the_ID(); ?>" <?php post_class('c-info__item'); ?>>
+        <div id="post-<?php the_ID(); ?>" class="c-info__item">
             <h3 class="c-info__title"><?php the_title(); ?></h3>
             <time class="c-info__date"><?php the_time("Y/m/j G:i"); ?></time>
-            <p class="c-info__desc"><?php the_content(); ?></p>
+            <div class="c-info__detail">
+                <?php the_content(); ?>
+            </div>
         </div>
     <?php endwhile;
             else :?>
