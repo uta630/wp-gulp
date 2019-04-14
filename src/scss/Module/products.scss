@@ -9,11 +9,6 @@
     }
 
     &__image {
-        align-items: flex-start;
-        align-content: flex-start;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
         flex-basis: percentage(540 / 1640);
 
         @include mq-down('md'){
@@ -22,15 +17,20 @@
     }
 
     &__panel {
-        flex-basis: 100%;
-
         margin-bottom: 12px;
     }
 
-    &__thumb {
-        flex-basis: 31%;
+    &__select {
+        align-items: flex-start;
+        display: flex;
+        
+        margin: -1%;
+    }
 
-        width: 0;
+    &__thumb {
+        width: 31.333%;
+
+        margin: 1%;
 
         cursor: pointer;
 
@@ -41,6 +41,12 @@
 
     &__detail {
         flex-basis: percentage(1040 / 1640);
+
+        & a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
     &__title {
         margin-bottom: 12px;

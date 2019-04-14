@@ -19,9 +19,10 @@
 <div class="l-section c-card">
     <div class="c-card__items">
         <?php get_template_part('loop'); ?>
+        <a href="<?php echo get_post_cat_link('コンテンツ') ?>" class="c-card__item">
+            <span class="c-card__item-inner">一覧</span>
+        </a>
     </div>
-    
-    <a href="<?php echo get_post_cat_link('コンテンツ') ?>" class="c-btn">一覧へ</a>
 </div>
 
 <div class="l-section c-heading">
@@ -39,7 +40,7 @@
     <div class="c-list__items">
         <?php get_template_part('loop-info'); ?>
         
-        <a href="/information/" class="c-btn">一覧へ</a>
+        <a href="/information/" class="c-btn">一覧</a>
     </div>
 </div>
 

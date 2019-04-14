@@ -1,5 +1,8 @@
 <?php
 
+// アイキャッチの表示
+add_theme_support('post-thumbnails');
+
 // 記事「続きを読む」
 function excerpt_length($length) {
     return 46;

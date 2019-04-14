@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="l-catch c-catch">
+<div class="l-catch c-catch" style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
     <h1 class="c-catch__title"><?php the_title(); ?></h1>
 </div>
 

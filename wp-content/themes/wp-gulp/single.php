@@ -19,14 +19,16 @@
             ?>
             <img src="<?php echo $images[0] ; ?>" class="c-products__panel js-pick-panel">
 
-            <?php
-                for($i=1; $i <= $images_limit; $i++){
-                    $active = $i !== 1 ?: 'is-active' ;
-                    if($images[($i-1)]){
-                        echo '<img src="'.$images[($i-1)].'" class="c-products__thumb js-pick-thumb '.$active.'">';
+            <div class="c-products__select">
+                <?php
+                    for($i=1; $i <= $images_limit; $i++){
+                        $active = $i !== 1 ?: 'is-active' ;
+                        if($images[($i-1)]){
+                            echo '<img src="'.$images[($i-1)].'" class="c-products__thumb js-pick-thumb '.$active.'">';
+                        }
                     }
-                }
-            ?>
+                ?>
+            </div>
         </div>
 
         <div class="c-products__detail">

@@ -1,7 +1,7 @@
 .c-btn {
     display: block;
 
-    background: $secondary-color;
+    background: $primary-color;
 
     width: 128px;
 
@@ -19,7 +19,7 @@
     transition-property: background, box-shadow;
 
     &:hover {
-        background: $primary-color;
+        background: $secondary-color;
         box-shadow: 0 0 0 $secondary-color;
     }
 }
